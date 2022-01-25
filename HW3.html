@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Movie rater</title>
+      <link rel="stylesheet" type="text/css" href="HW3.css">
+</head>
+
+<body>
+
+<h2>Enter Movie</h2>
+
+<!-- return set to false to prevent default form submission to a URL -->
+<form name = "mainFrom" onsubmit="return false">
+
+<!--       The <fieldset> tag is used to group related elements in a form. -->
+	<fieldset id="movieinfo">
+    <!--       The <legend> tag is puts a title on this subset of the form -->
+    <legend>Movie Information</legend>
+    <!--       for= some id connects the lable to to the input box -->
+   <label for="movietitle"> Movie title:</label> 
+    <input name="movietitle" id="movietitle" />
+    
+    <label for="year">Year:</label>
+    <input name="year" id="year" />
+    
+     <label for="rating">Rating:</label>
+    <input name="rating" id="rating" type="number" min="0" max="5"/>
+      <!-- here we submit to a local js file -->
+    <input type="submit" value="Submit" onclick="formSubmitEvent()">
+    
+    </fieldset>
+
+</form>
+<br><br><br>
+<button type="button" id="show">Show All</button>
+<textarea rows="10" cols="60" id="output" ></textarea>
+
+<script type="text/javascript" src="HW3.js"></script>
+</body>
+</html>
